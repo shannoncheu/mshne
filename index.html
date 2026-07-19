@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人主页</title>
+  <!-- 引入 GitHub 官方的 Primer CSS 样式库 -->
+  <link href="https://unpkg.com/@primer/css@20.5.0/dist/primer.css" rel="stylesheet" />
+  <style>
+    /* 微调背景色和容器，完美还原 utteranc.es 的呼吸感 */
+    body {
+      background-color: #f6f8fa;
+      color: #24292f;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    .main-container {
+      max-width: 760px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    .avatar-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .avatar {
+      border-radius: 50%;
+      border: 1px solid #d0d7de;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    
+    <!-- 头部区域：头像与简介 -->
+    <header class="text-center mb-6">
+      <div class="avatar-wrapper mb-3">
+        <!-- 替换为你自己的 GitHub 头像或任意图片链接 -->
+        <img class="avatar" src="https://github.com/github.png" width="100" height="100" alt="Avatar">
+      </div>
+      <h1 class="h1 lh-condensed mb-2">你的名字 / YourName</h1>
+      <p class="f3 text-color-muted font-weight-light">Stay hungry, stay foolish. 专注于前端开发与开源技术。</p>
+      
+      <!-- 标签/徽章 -->
+      <div class="mt-3">
+        <span class="Label Label--secondary mr-1">📍 北京</span>
+        <span class="Label Label--accent mr-1">🚀 Developer</span>
+        <span class="Label Label--success">☕ Code Lover</span>
+      </div>
+    </header>
+
+    <hr class="my-5 border-color-muted">
+
+    <!-- 核心板块：关于我 (使用了 GitHub 的 Box 组件样式) -->
+    <section class="Box mb-4 shadow-sm">
+      <div class="Box-header bg-canvas-subtle">
+        <h3 class="Box-title d-flex flex-items-center">
+          <svg class="octicon mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142L3.943 6.613a3.5 3.5 0 1 1 5.114 0Zm-5.114-.92a2 2 0 1 0 3.106 0l-.303-.404a.5.5 0 0 1 .822-.574l.142.19a3.5 3.5 0 1 1-4.412 0l.143-.19a.5.5 0 0 1 .821.574Z"></path></svg>
+          关于我 / About Me
+        </h3>
+      </div>
+      <div class="Box-body MarkdownBody">
+        <p>你好，我是 **YourName**。一名热衷于构建美好数字体验的开发者。我喜欢简洁的代码和干净的 UI。</p>
+        <ul>
+          <li>🛠️ 常用技术栈：React, Vue, Node.js, Tailwind CSS</li>
+          <li>🎯 目前正在探索：WebAssembly, 自动化工作流</li>
+          <li>✍️ 偶尔会在博客分享技术心得与生活随笔</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 核心板块：我的项目 -->
+    <section class="Box mb-4 shadow-sm">
+      <div class="Box-header bg-canvas-subtle">
+        <h3 class="Box-title d-flex flex-items-center">
+          <svg class="octicon mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 1 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.25.25 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          开源项目 / Projects
+        </h3>
+      </div>
+      
+      <!-- 项目列表条目 1 -->
+      <div class="Box-row d-flex flex-items-center justify-between">
+        <div>
+          <a href="#" class="font-weight-bold text-underline">my-awesome-plugin</a>
+          <p class="text-color-muted f6 mt-1 mb-0">一个极简的、无依赖的网页性能监控插件。</p>
+        </div>
+        <span class="color-fg-muted f6">★ 128</span>
+      </div>
+      
+      <!-- 项目列表条目 2 -->
+      <div class="Box-row d-flex flex-items-center justify-between">
+        <div>
+          <a href="#" class="font-weight-bold text-underline">clean-theme-hugo</a>
+          <p class="text-color-muted f6 mt-1 mb-0">模仿 GitHub 风格的 Hugo 博客主题。</p>
+        </div>
+        <span class="color-fg-muted f6">★ 64</span>
+      </div>
+    </section>
+
+    <!-- 底部：社交链接 -->
+    <footer class="text-center my-6 py-4 border-top border-color-muted">
+      <a class="btn btn-outline mr-2" href="https://github.com/你的账号" target="_blank">
+        GitHub
+      </a>
+      <a class="btn btn-outline mr-2" href="mailto:your-email@example.com">
+        Email
+      </a>
+      <a class="btn btn-outline" href="#">
+        Blog
+      </a>
+      <p class="f6 text-color-muted mt-3">© 2026 YourName. Powered by Primer CSS.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
